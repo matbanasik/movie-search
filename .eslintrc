@@ -29,6 +29,7 @@
         "indent": ["error", 4],
         "linebreak-style": "off",
         "comma-dangle": "off",
+        "react/prop-types": 0,
         "prettier/prettier": [
             "off"
         ]
