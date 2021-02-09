@@ -27,8 +27,8 @@ const App: FC = () => {
     }
 
     return (
-        <div className="App">
-            <div className="block">
+        <div style={{ marginTop: '100px' }}>
+            <div className="columns is-centered">
                 <div className="field is-grouped">
                     <div className="control">
                         <SearchInput value={searchValue} onChange={handleInputChange} />
@@ -38,7 +38,9 @@ const App: FC = () => {
                     </div>
                 </div>
             </div>
-            <ItemsList items={items} />
+            <div className="columns is-centered">
+                <ItemsList items={items} />
+            </div>
         </div>
     )
 }
