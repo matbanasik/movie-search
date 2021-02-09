@@ -1,12 +1,13 @@
 import React, { FC } from 'react';
-import items from '../mocks/movie.json';
+import Movie from '../interfaces/movie';
 
-interface Movie {
-    Title: string,
-    Year: string,
+interface ItemListProps {
+    items: Movie[],
 }
 
-const ItemsList: FC = () => {
+const ItemsList: FC<ItemListProps> = ({ items }) => {
+    console.log(items)
+
     return (
         <table className="table">
             <thead>
