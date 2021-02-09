@@ -7,7 +7,7 @@ interface SearchInputProps {
 
 const SearchInput: FC<SearchInputProps> = ( { value, onChange }) => {
     return (
-        <input type="text" className="input" value={value} onChange={onChange} />
+        <input type="text" className="input" value={value} onChange={onChange} placeholder="Search movie" />
     );
 };
 
