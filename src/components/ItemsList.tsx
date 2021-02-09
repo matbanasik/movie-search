@@ -6,7 +6,6 @@ interface ItemListProps {
 }
 
 const ItemsList: FC<ItemListProps> = ({ items }) => {
-    console.log(items)
 
     return (
         <table className="table">
