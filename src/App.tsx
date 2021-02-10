@@ -5,7 +5,6 @@ import ItemsList from './components/ItemsList';
 import Movie from './interfaces/movie';
 import "bulma";
 
-
 const API_KEY = 'bfb1987';
 
 const App: FC = () => {
@@ -13,7 +12,7 @@ const App: FC = () => {
     const [items, setItems] = useState<Movie[]>([]);
 
     const handleInputChange = (e: React.FormEvent<HTMLInputElement>) => {
-        setSearchValue(e?.currentTarget?.value || '')
+        setSearchValue(e?.currentTarget?.value || '');
     }
 
     const handleSearchButtonClick = async () => {
@@ -22,7 +21,7 @@ const App: FC = () => {
             const movies = await response.json();
             setItems([movies]);
         } catch(e) {
-            console.log(e);
+            setItems([]);
         }
     }
 
@@ -39,7 +38,7 @@ const App: FC = () => {
                 </div>
             </div>
             <div className="columns is-centered">
-                <ItemsList items={items} />
+                {items.length > 0 ? <ItemsList items={items} /> : 'No movies found'}
             </div>
         </div>
     )
