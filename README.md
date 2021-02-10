@@ -7,3 +7,4 @@ What I would do with the app as next steps:
 - Include just what is needed for styling
 - Add search trigger on enter click
 - Investigate the API on why it's returning just one movie instead of an array
+- Add loading indicator

@@ -17,7 +17,7 @@ const App: FC = () => {
 
     const handleSearchButtonClick = async () => {
         try {
-            const response = await fetch(`http://www.omdbapi.com/?apikey=${API_KEY}&t=${searchValue}`);
+            const response = await fetch(`https://www.omdbapi.com/?apikey=${API_KEY}&t=${searchValue}`);
             const movies = await response.json();
             setItems([movies]);
         } catch(e) {
